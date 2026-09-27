@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Help with installing, scanning, auditing, monitoring, and managing local data in SiteMed."
+    />
+    <meta name="theme-color" content="#0b1f33" />
+    <title>Support — SiteMed</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="SiteMed home">
+        <img src="assets/logo.svg" width="36" height="36" alt="" />
+        <span><strong>SiteMed</strong><small>Website health, explained</small></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="support-hero">
+        <p class="eyebrow">SiteMed support</p>
+        <h1>Start with the simple checks.</h1>
+        <p>
+          Most scan problems can be resolved by reopening the page, checking Chrome’s
+          access prompt, or running the scan again after the website finishes loading.
+        </p>
+      </section>
+
+      <section class="support-layout">
+        <div class="support-main">
+          <section>
+            <h2>SiteMed cannot check this page</h2>
+            <ol class="steps">
+              <li>
+                <span>1</span>
+                <p>Reload the webpage and wait for it to finish opening.</p>
+              </li>
+              <li>
+                <span>2</span>
+                <p>
+                  Select the SiteMed toolbar icon and choose <strong>Check again</strong>.
+                </p>
+              </li>
+              <li>
+                <span>3</span>
+                <p>Confirm that the tab is a normal HTTP or HTTPS webpage.</p>
+              </li>
+            </ol>
+            <p class="support-note">
+              Chrome prevents extensions from inspecting browser settings, the Chrome Web
+              Store, new-tab pages, and some built-in or protected pages.
+            </p>
+          </section>
+
+          <section>
+            <h2>An audit or monitor did not start</h2>
+            <p>
+              Whole-site audits and availability monitoring need optional access to the
+              specific website. Start the action again and accept Chrome’s site-access
+              prompt. SiteMed stops if that permission is declined.
+            </p>
+          </section>
+
+          <section>
+            <h2>A result looks incorrect</h2>
+            <p>
+              Select <strong>Check again</strong> after the page settles. Dynamic pages
+              can change after opening, and loading results can vary with the connection,
+              cache, device, and browser-window size.
+            </p>
+            <p>
+              Use the finding’s <strong>Advanced explanation</strong> when reporting the
+              issue. Do not include passwords, payment details, private form entries, or
+              other sensitive information in a support request.
+            </p>
+          </section>
+
+          <section>
+            <h2>Remove saved information</h2>
+            <p>
+              Open the SiteMed dashboard and remove an individual saved website. To remove
+              everything, clear SiteMed’s extension data in Chrome or uninstall the
+              extension.
+            </p>
+          </section>
+        </div>
+
+        <aside class="support-contact">
+          <p class="eyebrow">Need more help?</p>
+          <h2>Use the official support channel.</h2>
+          <p>
+            After SiteMed is published, open its Chrome Web Store listing and select the
+            Support section to send a question, bug report, or suggestion.
+          </p>
+          <h3>Helpful details to include</h3>
+          <ul>
+            <li>SiteMed version</li>
+            <li>Chrome version</li>
+            <li>What you expected</li>
+            <li>What happened instead</li>
+            <li>The affected website, only if you are comfortable sharing it</li>
+          </ul>
+          <a class="text-link" href="privacy.html">How SiteMed handles data</a>
+        </aside>
+      </section>
+
+      <section class="support-faq">
+        <div class="section-heading compact">
+          <p class="eyebrow">Common questions</p>
+          <h2>Using SiteMed</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Why did SiteMed find nothing?</summary>
+            <p>
+              It means the checks that completed did not find a listed problem. SiteMed
+              cannot test every part of a website and may miss earlier errors, content
+              inside another page, or content that appears later.
+            </p>
+          </details>
+          <details>
+            <summary>Why does SiteMed request access to a website?</summary>
+            <p>
+              The popup can inspect the active page without permanent site access. An
+              audit or monitoring check must request pages from the saved website, so
+              Chrome asks for that website’s permission when the feature is started.
+            </p>
+          </details>
+          <details>
+            <summary>Does SiteMed upload reports?</summary>
+            <p>
+              No. Reports remain in Chrome. Copying, exporting, printing, or saving a PDF
+              happens only after the user chooses that action.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="index.html">
+        <img src="assets/logo.svg" width="30" height="30" alt="" />
+        <strong>SiteMed</strong>
+      </a>
+      <p>Website health, explained.</p>
+      <nav aria-label="Footer navigation">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <p class="copyright">© 2026 SiteMed</p>
+    </footer>
+  </body>
+</html>

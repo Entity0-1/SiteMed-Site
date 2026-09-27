@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="SiteMed is a private Chrome extension that finds common website problems and explains what to do next in plain English."
+    />
+    <meta name="theme-color" content="#0b1f33" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SiteMed — Website health, explained" />
+    <meta
+      property="og:description"
+      content="Find common website problems, understand who can fix them, and keep track of what changed."
+    />
+    <title>SiteMed — Website health, explained</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SiteMed",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome",
+        "description": "A Chrome extension that finds common website problems and explains them in plain English."
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="SiteMed home">
+        <img src="assets/logo.svg" width="36" height="36" alt="" />
+        <span>
+          <strong>SiteMed</strong>
+          <small>Website health, explained</small>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#checks">What it checks</a>
+        <a href="#workspace">Workspace</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A private Chrome extension</p>
+          <h1>Find the problem.<br />Understand the fix.</h1>
+          <p class="hero-lede">
+            SiteMed checks the website you are viewing for common problems and explains
+            each finding without assuming you know how websites work.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#checks">See what it checks</a>
+            <a class="button button-secondary" href="privacy.html"
+              >Read the privacy policy</a
+            >
+          </div>
+          <ul class="plain-list hero-points" aria-label="SiteMed highlights">
+            <li>Plain-English guidance</li>
+            <li>Saved comparisons</li>
+            <li>No SiteMed analytics</li>
+          </ul>
+        </div>
+
+        <div class="scan-demo" aria-label="Example SiteMed result">
+          <div class="demo-titlebar">
+            <span class="demo-mark" aria-hidden="true">+</span>
+            <span><strong>SiteMed</strong><small>Scan complete</small></span>
+          </div>
+          <div class="demo-site">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span><small>Checked website</small><strong>example.com</strong></span>
+          </div>
+          <div class="demo-summary">
+            <strong>3 things to check</strong>
+            <span>Most likely the website is at fault.</span>
+          </div>
+          <ol class="demo-findings">
+            <li>
+              <span class="severity severity-error">1</span>
+              <span
+                ><strong>A picture did not load</strong
+                ><small>Visitors may be missing important information.</small></span
+              >
+            </li>
+            <li>
+              <span class="severity severity-warning">2</span>
+              <span
+                ><strong>A form box has no clear label</strong
+                ><small>Some people may have to guess what belongs there.</small></span
+              >
+            </li>
+            <li>
+              <span class="severity severity-info">3</span>
+              <span
+                ><strong>The main content appeared slowly</strong
+                ><small>The page may feel unresponsive while opening.</small></span
+              >
+            </li>
+          </ol>
+          <p class="demo-private">
+            <span aria-hidden="true">●</span> Checked on this device
+          </p>
+        </div>
+      </section>
+
+      <section class="statement" aria-label="SiteMed purpose">
+        <p>
+          Website diagnostics are often written for developers. SiteMed translates the
+          useful parts for everyone else.
+        </p>
+      </section>
+
+      <section class="section" id="checks">
+        <div class="section-heading">
+          <p class="eyebrow">What it checks</p>
+          <h2>A practical checkup for the page in front of you.</h2>
+          <p>
+            Results are based on evidence SiteMed can observe in Chrome. Technical details
+            stay available inside an optional advanced explanation.
+          </p>
+        </div>
+
+        <div class="check-grid">
+          <article>
+            <span class="check-number">01</span>
+            <h3>Things that look broken</h3>
+            <p>
+              Missing images and media, links that lead nowhere, cut-off text, controls
+              outside the window, and visible page errors.
+            </p>
+          </article>
+          <article>
+            <span class="check-number">02</span>
+            <h3>Forms and accessibility</h3>
+            <p>
+              Unclear form boxes, unnamed buttons, missing image descriptions, page
+              language, heading problems, and unsafe form behavior.
+            </p>
+          </article>
+          <article>
+            <span class="check-number">03</span>
+            <h3>Search and loading</h3>
+            <p>
+              Page titles and descriptions, search visibility settings, mobile setup, slow
+              content, delayed display, and unexpected layout movement.
+            </p>
+          </article>
+          <article>
+            <span class="check-number">04</span>
+            <h3>Strong trust warnings</h3>
+            <p>
+              Insecure pages, exposed password or payment forms, and unusual form
+              destinations. SiteMed reports evidence without declaring a site safe.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="workspace-section" id="workspace">
+        <div class="workspace-intro">
+          <p class="eyebrow">More than a one-time scan</p>
+          <h2>Keep a small website care workspace in Chrome.</h2>
+          <p>
+            Save a result when it matters, compare it later, and turn the findings into a
+            report someone can act on.
+          </p>
+        </div>
+
+        <div class="workspace-list">
+          <article>
+            <strong>Save &amp; compare</strong>
+            <p>See new findings and improvements against a baseline you choose.</p>
+          </article>
+          <article>
+            <strong>Audit more pages</strong>
+            <p>
+              Check up to 100 pages on an allowed website, including internal links and
+              search setup.
+            </p>
+          </article>
+          <article>
+            <strong>Monitor availability</strong>
+            <p>
+              Ask Chrome to check a saved homepage hourly and alert you after failures or
+              recovery.
+            </p>
+          </article>
+          <article>
+            <strong>Prepare a report</strong>
+            <p>
+              Add your business name and logo, then print or save a clear client report as
+              a PDF.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="privacy-callout">
+        <div>
+          <p class="eyebrow">Private by default</p>
+          <h2>Your scans are not sent to SiteMed.</h2>
+        </div>
+        <div>
+          <p>
+            SiteMed has no analytics, advertising trackers, accounts, or data server. Page
+            checks and saved workspaces remain in Chrome unless you choose to copy or
+            export them.
+          </p>
+          <a class="text-link" href="privacy.html">Read exactly what SiteMed handles</a>
+        </div>
+      </section>
+
+      <section class="section faq-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Good to know</p>
+          <h2>Clear limits make a better diagnosis.</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Can SiteMed guarantee that a website is safe?</summary>
+            <p>
+              No. SiteMed points out strong warning signs visible on the current page. It
+              does not use a reputation database and cannot prove that a website or seller
+              is trustworthy.
+            </p>
+          </details>
+          <details>
+            <summary>Does SiteMed repair websites?</summary>
+            <p>
+              SiteMed explains what it found, who can most likely fix it, and what to try
+              next. It does not change the website itself.
+            </p>
+          </details>
+          <details>
+            <summary>Why can two scans look different?</summary>
+            <p>
+              Results can change with the browser window, connection, cached files, and
+              content loaded by the website after the page opens.
+            </p>
+          </details>
+          <details>
+            <summary>Where is saved information kept?</summary>
+            <p>
+              Saved scans, audits, monitoring results, notes, and report branding stay in
+              Chrome extension storage on the user’s device.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="closing">
+        <p class="eyebrow">A clearer first step</p>
+        <h2>When a website feels wrong, start with what can be observed.</h2>
+        <div class="closing-links">
+          <a class="button button-light" href="support.html">Visit support</a>
+          <a class="button button-outline-light" href="privacy.html">Privacy policy</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="index.html">
+        <img src="assets/logo.svg" width="30" height="30" alt="" />
+        <strong>SiteMed</strong>
+      </a>
+      <p>Website health, explained.</p>
+      <nav aria-label="Footer navigation">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <p class="copyright">© 2026 SiteMed</p>
+    </footer>
+  </body>
+</html>

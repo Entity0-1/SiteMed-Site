@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="SiteMed privacy policy: what the Chrome extension checks, what it stores locally, and when it accesses a website."
+    />
+    <meta name="theme-color" content="#0b1f33" />
+    <title>Privacy policy — SiteMed</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="SiteMed home">
+        <img src="assets/logo.svg" width="36" height="36" alt="" />
+        <span><strong>SiteMed</strong><small>Website health, explained</small></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+
+    <main id="main" class="policy-layout">
+      <aside class="policy-sidebar">
+        <p class="eyebrow">SiteMed policy</p>
+        <h1>Privacy</h1>
+        <p>Effective September 27, 2026</p>
+        <nav aria-label="Privacy policy sections">
+          <a href="#overview">Overview</a>
+          <a href="#scans">Page scans</a>
+          <a href="#workspace-data">Saved workspace</a>
+          <a href="#network">Network activity</a>
+          <a href="#sharing">Sharing and notifications</a>
+          <a href="#permissions">Browser permissions</a>
+          <a href="#website">This website</a>
+          <a href="#choices">Your choices</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </aside>
+
+      <article class="policy-content">
+        <section id="overview">
+          <p class="policy-lede">
+            SiteMed analyzes pages and stores its workspace in Chrome. It does not include
+            SiteMed analytics, advertising trackers, user accounts, or a SiteMed data
+            server.
+          </p>
+          <div class="policy-summary">
+            <strong>The short version</strong>
+            <p>
+              Page checks happen on the device. Saved results remain in the browser.
+              SiteMed does not sell user data or send scan results to SiteMed.
+            </p>
+          </div>
+        </section>
+
+        <section id="scans">
+          <h2>Page scans</h2>
+          <p>
+            A page scan starts when the user opens SiteMed or selects
+            <strong>Check again</strong>. The scan can handle:
+          </p>
+          <ul>
+            <li>The page hostname and origin</li>
+            <li>
+              Counts of inspected and affected images, links, fields, controls, forms,
+              media, and layout elements
+            </li>
+            <li>HTTP status codes exposed by Chrome</li>
+            <li>Numeric positions used to highlight an affected element</li>
+            <li>Page structure and search-setting counts or yes-or-no results</li>
+            <li>Bounded loading times and a layout movement score</li>
+            <li>
+              The scan time, connection signal, detected site platform, and bounded trust
+              signals
+            </li>
+          </ul>
+          <p>
+            A scan does not retain page text, entered form values, image URLs, link
+            destinations, request bodies, cookies, headers, or screenshots. SiteMed may
+            check whether a control has a readable name, but the name itself is not
+            returned or stored.
+          </p>
+          <p>
+            The current tab report is stored temporarily in Chrome session storage. It is
+            removed when the tab navigates or closes and is rejected after 30 minutes.
+          </p>
+        </section>
+
+        <section id="workspace-data">
+          <h2>Saved workspace</h2>
+          <p>
+            Selecting <strong>Save &amp; compare</strong> copies the report into local
+            Chrome extension storage. The saved workspace can contain:
+          </p>
+          <ul>
+            <li>The website hostname and origin</li>
+            <li>Up to 30 scan reports per saved website</li>
+            <li>A user-entered display name, client or project label, and notes</li>
+            <li>A selected baseline and the latest report</li>
+            <li>
+              Whole-site audit paths, response status, redirects, inbound link paths, and
+              finding labels
+            </li>
+            <li>Robots and sitemap status, counts, and fixed finding labels</li>
+            <li>
+              Monitoring times, status, response time, and a short availability message
+            </li>
+            <li>Report branding text and an optional local logo image</li>
+          </ul>
+          <p>
+            Queries and fragments are removed from audit paths. Saved information remains
+            until the user removes the website, clears extension storage, or uninstalls
+            SiteMed. <strong>Export backup</strong> downloads this information as a JSON
+            file chosen by the user.
+          </p>
+        </section>
+
+        <section id="network">
+          <h2>Network activity</h2>
+          <p>
+            The popup scan observes the already loaded page and makes no extra requests.
+          </p>
+          <p>
+            <strong>Run audit</strong> requests pages from the same website after Chrome
+            asks the user to allow access to that site. It follows same-site links and
+            checks robots and sitemap files. <strong>Monitor hourly</strong> requests the
+            saved website’s origin on a Chrome alarm. These responses are analyzed locally
+            and are not forwarded to SiteMed or another service.
+          </p>
+          <p>SiteMed has no reputation lookup or analytics endpoint.</p>
+        </section>
+
+        <section id="sharing">
+          <h2>Clipboard, printing, and notifications</h2>
+          <p>
+            <strong>Copy report</strong> writes a plain-text report to the clipboard.
+            <strong>Print or save as PDF</strong> opens Chrome’s print flow. SiteMed does
+            not paste, upload, or send either report.
+          </p>
+          <p>
+            When monitoring is enabled, Chrome may show a local browser notification after
+            a failed check or a recovery. The user can revoke notification or site access
+            in Chrome.
+          </p>
+        </section>
+
+        <section id="permissions">
+          <h2>Browser permissions</h2>
+          <dl class="permission-list">
+            <div>
+              <dt>Active tab and scripting</dt>
+              <dd>Inspect the current page after the user opens SiteMed.</dd>
+            </div>
+            <div>
+              <dt>Storage</dt>
+              <dd>Keep temporary tab reports and the user-created local workspace.</dd>
+            </div>
+            <div>
+              <dt>Alarms</dt>
+              <dd>Schedule local availability checks.</dd>
+            </div>
+            <div>
+              <dt>Optional notifications</dt>
+              <dd>Show monitoring failure and recovery alerts.</dd>
+            </div>
+            <div>
+              <dt>Optional website access</dt>
+              <dd>
+                Request a specific saved website when the user starts an audit or enables
+                monitoring.
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <section id="website">
+          <h2>This website</h2>
+          <p>
+            This informational website does not use SiteMed analytics, advertising
+            trackers, cookies, accounts, or contact forms. It is hosted by GitHub Pages.
+            GitHub may process basic request and security information under the
+            <a
+              href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+              >GitHub General Privacy Statement</a
+            >.
+          </p>
+        </section>
+
+        <section id="choices">
+          <h2>Your choices</h2>
+          <ul>
+            <li>
+              Do not select <strong>Save &amp; compare</strong> if you do not want a
+              report kept locally.
+            </li>
+            <li>Remove an individual saved website from the SiteMed dashboard.</li>
+            <li>Revoke optional website or notification access in Chrome.</li>
+            <li>
+              Clear the extension’s data or uninstall SiteMed to remove its local
+              workspace.
+            </li>
+          </ul>
+        </section>
+
+        <section id="changes">
+          <h2>Policy changes</h2>
+          <p>
+            This page will be updated when SiteMed’s data handling changes. The effective
+            date at the top identifies the current version.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>
+            For privacy questions or product support, follow the instructions on the
+            <a href="support.html">SiteMed support page</a>. After publication, users can
+            also use the Support section on SiteMed’s official Chrome Web Store listing.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="index.html">
+        <img src="assets/logo.svg" width="30" height="30" alt="" />
+        <strong>SiteMed</strong>
+      </a>
+      <p>Website health, explained.</p>
+      <nav aria-label="Footer navigation">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <p class="copyright">© 2026 SiteMed</p>
+    </footer>
+  </body>
+</html>
