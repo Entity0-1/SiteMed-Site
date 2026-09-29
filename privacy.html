@@ -30,9 +30,10 @@
       <aside class="policy-sidebar">
         <p class="eyebrow">SiteMed policy</p>
         <h1>Privacy</h1>
-        <p>Effective September 27, 2026</p>
+        <p>Effective September 29, 2026</p>
         <nav aria-label="Privacy policy sections">
           <a href="#overview">Overview</a>
+          <a href="#data-use">Data SiteMed handles</a>
           <a href="#scans">Page scans</a>
           <a href="#workspace-data">Saved workspace</a>
           <a href="#network">Network activity</a>
@@ -54,10 +55,54 @@
           <div class="policy-summary">
             <strong>The short version</strong>
             <p>
-              Page checks happen on the device. Saved results remain in the browser.
-              SiteMed does not sell user data or send scan results to SiteMed.
+              Page checks happen on the device. Saved results remain in the browser. A
+              domain-age lookup sends the website's base domain to public registration
+              services. SiteMed does not sell user data or send scan results to SiteMed.
             </p>
           </div>
+        </section>
+
+        <section id="data-use">
+          <h2>Data SiteMed handles</h2>
+          <p>
+            The Chrome Web Store groups data into categories, including information used
+            only on your device. SiteMed's current data usage falls into these categories:
+          </p>
+          <ul>
+            <li>
+              <strong>Website content:</strong> SiteMed checks visible page text, links,
+              form structure, image loading, and other page details to explain findings.
+            </li>
+            <li>
+              <strong>Web history:</strong> SiteMed uses the address of the page you
+              choose to check. Saved reports and optional audits can retain website
+              addresses and page paths. It does not read your full Chrome browsing
+              history.
+            </li>
+            <li>
+              <strong>User activity:</strong> SiteMed checks page request results and
+              loading times. If you enable monitoring, it also stores the time and result
+              of each scheduled website availability check. It does not record clicks,
+              typing, mouse movement, or scrolling.
+            </li>
+            <li>
+              <strong>Personally identifiable information:</strong> Optional saved client
+              names, project labels, notes, and report branding can contain names or other
+              personal details you enter. They are kept in Chrome extension storage unless
+              you choose to export them.
+            </li>
+            <li>
+              <strong>Location:</strong> Public registration services receive your IP
+              address as part of the domain-age lookup. SiteMed does not request GPS or
+              precise device location.
+            </li>
+          </ul>
+          <p>
+            SiteMed uses this information to provide the page check and the optional
+            workspace, audit, monitoring, and report features. It does not use it for
+            advertising, credit decisions, or lending. SiteMed does not read values typed
+            into password or payment fields.
+          </p>
         </section>
 
         <section id="scans">
@@ -80,12 +125,20 @@
               The scan time, connection signal, detected site platform, and bounded trust
               signals
             </li>
+            <li>
+              A public domain-registration lookup status and registration date, when
+              available
+            </li>
           </ul>
           <p>
-            A scan does not retain page text, entered form values, image URLs, link
-            destinations, request bodies, cookies, headers, or screenshots. SiteMed may
-            check whether a control has a readable name, but the name itself is not
-            returned or stored.
+            A saved scan does not retain page text, entered form values, image URLs, link
+            destinations, request bodies, cookies, headers, or screenshots. While the
+            popup is open, the <strong>Affected items</strong> sections can display short
+            element names and addresses so the user can identify a specific problem. Query
+            strings, unrelated URL fragments, embedded credentials, and data URLs are
+            removed. These details exist only in popup memory and are discarded when the
+            popup closes. They are not included in saved scans, workspace exports, copied
+            reports, or network requests.
           </p>
           <p>
             The current tab report is stored temporarily in Chrome session storage. It is
@@ -125,7 +178,18 @@
         <section id="network">
           <h2>Network activity</h2>
           <p>
-            The popup scan observes the already loaded page and makes no extra requests.
+            The page-content scan observes the already loaded page and makes no extra page
+            requests. SiteMed separately sends the registered base domain, such as
+            <code>example.com</code>, to the public RDAP bootstrap service at
+            <code>rdap.org</code> to request its registration date. RDAP.org redirects the
+            request to the registry responsible for that domain.
+          </p>
+          <p>
+            The page path, query, fragment, page content, form values, and saved workspace
+            are not included in the domain-registration request. As with any web request,
+            RDAP.org, the responsible registry, and their network providers can receive
+            connection information such as the user’s IP address and browser request
+            headers. A short-lived in-memory cache reduces repeat lookups.
           </p>
           <p>
             <strong>Run audit</strong> requests pages from the same website after Chrome
@@ -134,7 +198,10 @@
             saved website’s origin on a Chrome alarm. These responses are analyzed locally
             and are not forwarded to SiteMed or another service.
           </p>
-          <p>SiteMed has no reputation lookup or analytics endpoint.</p>
+          <p>
+            SiteMed has no reputation-list, malware-scanning, advertising, or analytics
+            endpoint.
+          </p>
         </section>
 
         <section id="sharing">
@@ -178,6 +245,10 @@
               </dd>
             </div>
           </dl>
+          <p>
+            The RDAP domain-age lookup uses a normal public HTTPS request and does not
+            grant the extension access to another website’s page contents.
+          </p>
         </section>
 
         <section id="website">
